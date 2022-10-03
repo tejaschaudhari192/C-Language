@@ -24,7 +24,7 @@ void main()
         
     }
 
-    printf("\nNo of Vowels : %d\nVowels :",vc);
+    printf("\n\nNo of Vowels : %d\nVowels :",vc);
     for ( j = 0; j < vc; j++)
     {
         printf(" %c,",v[j]);
