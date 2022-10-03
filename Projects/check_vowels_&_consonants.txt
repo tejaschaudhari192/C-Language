@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char str[100];
+	puts("ENTER A STRING: ");
+	gets(str);
+	int len = strlen(str);
+	int i,count_vowel=0,count_consonants=0;
+	puts("VOWELS ARE : ");
+	for(i=0;i<=len;i++)
+	{
+		if(str[i]=='A'||str[i]=='a'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='O'||str[i]=='o'||str[i]=='u'||str[i]=='U')
+		{
+			
+			printf("\n %c ",str[i]);
+			count_vowel++;
+				
+			
+		}
+		
+		
+	}
+	puts("\nCONSONANTS ARE : ");
+	for(i=0;i<=len;i++)
+	{
+		if(str[i]=='A'||str[i]=='a'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='O'||str[i]=='o'||str[i]=='u'||str[i]=='U')
+		{
+				
+			
+		}
+		else if(str[i]==' '||str[i]=='\0')
+		{
+			
+		}
+		else
+		{
+			
+			printf("\n %c",str[i]);
+			count_consonants++;
+		}
+		
+	}
+	printf("\nNUMBER OF VOWELS=%d",count_vowel);
+	printf("\nNUMBER OF VOWELS=%d",count_consonants);
+	
+
+	return 0;

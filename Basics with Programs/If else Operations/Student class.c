@@ -2,21 +2,21 @@
 
 int main()
 {
-    int n1,n2,n3,add;  float per;
+    int num1,num2,num3,add;  float per;
     printf("For check student class");
     printf("\n\n Enter marks of subject 1 = ");
-    scanf("%d",&n1);
+    scanf("%d",&num1);
     printf("\n\n Enter marks of subject 2 = ");
-    scanf("%d",&n2);
+    scanf("%d",&num2);
     printf("\n\n Enter marks of subject 3 = ");
-    scanf("%d",&n3);
+    scanf("%d",&num3);
     
-    add = n1 + n2 + n3 ;
+    add = num1 + num2 + num3 ;
     per = add / 3 ;
     
-    if( n1 < 0 || n1 > 100 ||
-        n2 < 0 || n2 > 100 ||
-        n3 < 0 || n3 > 100 )
+    if( num1 < 0 || num1 > 100 ||
+        num2 < 0 || num2 > 100 ||
+        num3 < 0 || num3 > 100 )
         
         printf("\n\n\tInvalid marks");
         
@@ -46,3 +46,5 @@ int main()
     
     return 0;
 }
+
+sta
