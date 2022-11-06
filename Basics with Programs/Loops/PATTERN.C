@@ -2,7 +2,7 @@
 int main()
 {
 	int a,b,n;
-	// clrscr();
+	// //clrscr();();
 	scanf("%d",&n);
 
 	printf("\n\nPattern :\n");

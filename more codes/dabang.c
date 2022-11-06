@@ -1,50 +1,15 @@
-// Date 10/10/22
-
 #include<stdio.h>
-
 void main()
 {
-    int n,i,j;
-    printf("Enter Value : ");
+    int n,b;
+    printf("Enter decimal to get binary : ");
     scanf("%d",&n);
-
-    for ( i = 1; i <= n; i++)
+    printf("In Binary : ");
+    while(n!=0)
     {
-
-        j=1;
-        while (j<=n-i+1)
-        {
-            printf("%d",j);
-            j++;
-        }
-
-        j=1;
-        while (j<i)
-        {
-            printf("*");
-            j++;
-        }
-
-        j=1;
-        while (j<i)
-        {
-            printf("*");
-            j++;
-        }
-
-        j=n-i+1;
-        while (j>=1)
-        {
-            printf("%d",j);
-            j--;
-        }
-        
-        printf("\n");
-        
+        b=n&1;
+        n=n>>1;
+        printf("%d",b);
     }
     
-    
-
-// coded by Tejas
 }
-

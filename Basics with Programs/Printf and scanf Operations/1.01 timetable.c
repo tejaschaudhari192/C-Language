@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	//clrscr();
+	clrscr();
     printf("\t\tR.C Patel Marathi medium Secondary school, Shirpur\n");
 	printf("************************************Timetable********************************************\n");
 	printf("_________________________________________________________________________________________\n");
