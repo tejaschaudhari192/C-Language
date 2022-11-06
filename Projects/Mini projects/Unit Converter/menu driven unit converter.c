@@ -1,6 +1,6 @@
 
 #include<stdio.h>
-#include<conio.h>
+// #include<conio.h>
 void main()
 {
     
@@ -18,7 +18,7 @@ void main()
     printf("\n\nEnter = ");
     scanf(" %c",&opt);
 
-    clrscr(); //it will clear upper statements form output window
+    system('cls');    //it will clear upper statements form output window
 
     switch( opt )
     {
@@ -186,7 +186,7 @@ void main()
         printf("\n\n\nDo you want to go main menu?(y/n)....");
         scanf(" %c",&opt);
         
-    clrscr();
+    system('cls');
             
     }
     while(opt == 'y');
