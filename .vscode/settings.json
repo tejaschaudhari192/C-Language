@@ -1,5 +1,11 @@
 {
     "files.associations": {
-        "Pallindrome [ string ].C": "cpp"
-    }
+        "Pallindrome [ string ].C": "cpp",
+        "Insertion_Selection.C": "cpp",
+        "MEMORY.C": "cpp",
+        "Binary_Search.C": "cpp",
+        "Hash_Table.C": "cpp",
+        "Quicksort.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -1,0 +1,459 @@
+[33mcommit c7d36058d61996d4a2009c9c3e0920e3375fe15d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Tejas Chaudhari <jaybalaji192@gmail.com>
+Date:   Sun Nov 6 19:06:02 2022 +0530
+
+    changer merged 1st time and formatted unit convertor
+
+[1mdiff --git a/Projects/Mini projects/Unit Converter/menu driven unit converter.c b/Projects/Mini projects/Unit Converter/menu driven unit converter.c[m
+[1mindex 9ebaa4c..af20eee 100644[m
+[1m--- a/Projects/Mini projects/Unit Converter/menu driven unit converter.c[m	
+[1m+++ b/Projects/Mini projects/Unit Converter/menu driven unit converter.c[m	
+[36m@@ -1,194 +1,189 @@[m
+ [m
+[31m-#include<stdio.h>[m
+[32m+[m[32m#include <stdio.h>[m
+ // #include<conio.h>[m
+ void main()[m
+ {[m
+[31m-    [m
+[31m-    char opt; //variable for choose required conversion[m
+[31m-    int sub;  // for choose conversion ootion[m
+[31m-    float inp,out;  // input and output variable of conversion[m
+[31m-    [m
+[32m+[m
+[32m+[m[32m    char opt;       // variable for choose required conversion[m
+[32m+[m[32m    int sub;        // for choose conversion ootion[m
+[32m+[m[32m    float inp, out; // input and output variable of conversion[m
+[32m+[m
+     do[m
+     {[m
+[31m-    printf("*************  Unit Converter  **************\n");[m
+[31m-    printf("\n\tt for temperature conversion");[m
+[31m-    printf("\n\tm for mass conversion");[m
+[31m-    printf("\n\tc for currency conversion");[m
+[31m-    printf("\n\tl for Length conversion");[m
+[31m-    printf("\n\nEnter = ");[m
+[31m-    scanf(" %c",&opt);[m
+[32m+[m[32m        printf("*************  Unit Converter  **************\n");[m
+[32m+[m[32m        printf("\n\tt for temperature conversion");[m
+[32m+[m[32m        printf("\n\tm for mass conversion");[m
+[32m+[m[32m        printf("\n\tc for currency conversion");[m
+[32m+[m[32m        printf("\n\tl for Length conversion");[m
+[32m+[m[32m        printf("\n\nEnter = ");[m
+[32m+[m[32m        scanf(" %c", &opt);[m
+ [m
+[31m-    system('cls');    //it will clear upper statements form output window[m
+[32m+[m[32m        system('cls'); // it will clear upper statements form output window[m
+ [m
+[31m-    switch( opt )[m
+[31m-    {[m
+[32m+[m[32m        switch (opt)[m
+[32m+[m[32m        {[m
+         case 't':[m
+             printf("You choose temperature conversion\n");[m
+             printf("\n\t1 for Celcius to Fahrenheit");[m
+             printf("\n\t2 for Fahrenheit to Celcius\n");[m
+[31m-            [m
+[32m+[m
+             printf("\n\nEnter = ");[m
+[31m-            scanf("%d",&sub);[m
+[31m-            [m
+[31m-            switch ( sub )[m
+[32m+[m[32m            scanf("%d", &sub);[m
+[32m+[m
+[32m+[m[32m            switch (sub)[m
+             {[m
+[31m-            case 1:               [m
+[31m-                    printf("Enter °C = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = ( inp*1.8 ) + 32;[m
+[31m-                    printf("\nIn Fahrenheit = %.2f",out);[m
+[31m-            [m
+[31m-                    break;[m
+[31m-                [m
+[31m-            case 2:                [m
+[31m-                    printf("Enter °F = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp - 32;[m
+[31m-                    printf("\nIn Celcius = %.2f",out/1.8);[m
+[31m-                    [m
+[31m-                    break;[m
+[31m-            [m
+[31m-             default:[m
+[31m-                    printf("Invalid Input...");    [m
+[31m-                    break;[m
+[32m+[m[32m            case 1:[m
+[32m+[m[32m                printf("Enter °C = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = (inp * 1.8) + 32;[m
+[32m+[m[32m                printf("\nIn Fahrenheit = %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            case 2:[m
+[32m+[m[32m                printf("Enter °F = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp - 32;[m
+[32m+[m[32m                printf("\nIn Celcius = %.2f", out / 1.8);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            default:[m
+[32m+[m[32m                printf("Invalid Input...");[m
+[32m+[m[32m                break;[m
+             }[m
+[31m-            [m
+[32m+[m
+             break;[m
+[31m-            [m
+[32m+[m
+         case 'm':[m
+[31m-        [m
+[32m+[m
+             printf("You choose mass conversion");[m
+             printf("\n\n\t1 for kgs to pounds");[m
+             printf("\n\t2 for kgs to ounce");[m
+             printf("\n\nEnter = ");[m
+[31m-            scanf("%d",&sub);[m
+[32m+[m[32m            scanf("%d", &sub);[m
+ [m
+[31m-            switch( sub )[m
+[32m+[m[32m            switch (sub)[m
+             {[m
+[31m-            case 1:                 [m
+[31m-                    printf("Enter Kgs = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*2.205;[m
+[31m-                    printf("In pounds %.2f",out);[m
+[31m-                    [m
+[31m-                    break;[m
+[32m+[m[32m            case 1:[m
+[32m+[m[32m                printf("Enter Kgs = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 2.205;[m
+[32m+[m[32m                printf("In pounds %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+ [m
+             case 2:[m
+[31m-                    printf("Enter Kgs = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*35.274;[m
+[31m-                    printf("In ounce %.2f",out);[m
+[31m-                    [m
+[31m-                    break;[m
+[31m-            [m
+[32m+[m[32m                printf("Enter Kgs = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 35.274;[m
+[32m+[m[32m                printf("In ounce %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+             default:[m
+[31m-                    printf("Invalid Input...");                       break;[m
+[31m-                    break;[m
+[31m-            [m
+[31m-            [m
+[32m+[m[32m                printf("Invalid Input...");[m
+[32m+[m[32m                break;[m
+[32m+[m[32m                break;[m
+             }[m
+[31m-            [m
+[31m-            break;    [m
+[31m-                        [m
+[32m+[m
+[32m+[m[32m            break;[m
+[32m+[m
+         case 'c':[m
+[31m-        [m
+[32m+[m
+             printf("You choose currency conversion");[m
+             printf("\n\n\t1 for Rs to USD");[m
+             printf("\n\t2 for Rs to EUR");[m
+             printf("\n\t3 for Rs to YEN");[m
+[31m-            [m
+[32m+[m
+             printf("\n\nEnter = ");[m
+[31m-            scanf("%d",&sub);[m
+[31m-            [m
+[31m-            switch ( sub )[m
+[32m+[m[32m            scanf("%d", &sub);[m
+[32m+[m
+[32m+[m[32m            switch (sub)[m
+             {[m
+[31m-            case 1 :                [m
+[31m-                    printf("\nEnter Rs = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*0.013;[m
+[31m-                    printf("In USD = %.2f",out);[m
+[31m-                    [m
+[31m-                    break;[m
+[31m-            [m
+[31m-            case 2 :                [m
+[31m-                    printf("\nEnter Rs = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*0.012;[m
+[31m-                    printf("In EUR = %.2f",out);[m
+[31m-            [m
+[31m-                    break;[m
+[31m-            [m
+[31m-            case 3 :               [m
+[31m-                    printf("\nEnter Rs = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*1.68;[m
+[31m-                    printf("In YEN = %.2f",out); [m
+[31m-                    break;[m
+[31m-            [m
+[31m-            default: [m
+[31m-                    printf("Invalid Input..."); [m
+[31m-                    break;           [m
+[32m+[m[32m            case 1:[m
+[32m+[m[32m                printf("\nEnter Rs = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 0.013;[m
+[32m+[m[32m                printf("In USD = %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            case 2:[m
+[32m+[m[32m                printf("\nEnter Rs = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 0.012;[m
+[32m+[m[32m                printf("In EUR = %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            case 3:[m
+[32m+[m[32m                printf("\nEnter Rs = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 1.68;[m
+[32m+[m[32m                printf("In YEN = %.2f", out);[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            default:[m
+[32m+[m[32m                printf("Invalid Input...");[m
+[32m+[m[32m                break;[m
+             }[m
+[31m-            [m
+[32m+[m
+             break;[m
+[31m-            [m
+[31m-        case 'l':        [m
+[32m+[m
+[32m+[m[32m        case 'l':[m
+             printf("You choose Length conversion");[m
+             printf("\n\n\t1 for metre to foot");[m
+             printf("\n\t2 for metre to inch");[m
+             printf("\n\t3 for metre to Yard");[m
+[31m-            [m
+[32m+[m
+             printf("\n\nEnter = ");[m
+[31m-            scanf("%d",&sub);[m
+[32m+[m[32m            scanf("%d", &sub);[m
+ [m
+[31m-            switch( sub )[m
+[32m+[m[32m            switch (sub)[m
+             {[m
+[31m-            case 1 :[m
+[31m-                [m
+[31m-                    printf("\nEnter metre = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*3.28;[m
+[31m-                    printf("In foot = %.2f",out);[m
+[31m-                    [m
+[31m-                    break;[m
+[31m-[m
+[31m-            case 2 :              [m
+[31m-                    printf("\nEnter metre = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*39.37;[m
+[31m-                    printf("In inch = %.2f",out);[m
+[31m-                    [m
+[31m-                    break;[m
+[31m-[m
+[31m-            case 3 :[m
+[31m-                [m
+[31m-                    printf("\nEnter metre = ");[m
+[31m-                    scanf("%f",&inp);[m
+[31m-                    out = inp*1.0936;[m
+[31m-                    printf("In Yard = %.2f",out);[m
+[31m-                    [m
+[31m-                    break;[m
+[31m-            [m
+[31m-            default :[m
+[31m-                    printf("Invalid Input...");    [m
+[31m-            break;[m
+[31m-            [m
+[32m+[m[32m            case 1:[m
+[32m+[m
+[32m+[m[32m                printf("\nEnter metre = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 3.28;[m
+[32m+[m[32m                printf("In foot = %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            case 2:[m
+[32m+[m[32m                printf("\nEnter metre = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 39.37;[m
+[32m+[m[32m                printf("In inch = %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            case 3:[m
+[32m+[m
+[32m+[m[32m                printf("\nEnter metre = ");[m
+[32m+[m[32m                scanf("%f", &inp);[m
+[32m+[m[32m                out = inp * 1.0936;[m
+[32m+[m[32m                printf("In Yard = %.2f", out);[m
+[32m+[m
+[32m+[m[32m                break;[m
+[32m+[m
+[32m+[m[32m            default:[m
+[32m+[m[32m                printf("Invalid Input...");[m
+[32m+[m[32m                break;[m
+             }[m
+[31m-            [m
+[31m-        break;        [m
+ [m
+[31m-        default :[m
+[32m+[m[32m            break;[m
+[32m+[m
+[32m+[m[32m        default:[m
+             printf("Choose valid option....");[m
+ [m
+[31m-        break;[m
+[31m-    [m
+[32m+[m[32m            break;[m
+         }[m
+         printf("\n\n\nDo you want to go main menu?(y/n)....");[m
+[31m-        scanf(" %c",&opt);[m
+[31m-        [m
+[31m-    system('cls');[m
+[31m-            [m
+[31m-    }[m
+[31m-    while(opt == 'y');[m
+[32m+[m[32m        scanf(" %c", &opt);[m
+[32m+[m
+[32m+[m[32m        system('cls');[m
+ [m
+[32m+[m[32m    } while (opt == 'y');[m
+ }[m
+\ No newline at end of file[m
+
+[33mcommit 0a6308ee8f70547941382bd588dd3b4276b90e4d[m[33m ([m[1;32mchanger[m[33m)[m
+Author: Tejas Chaudhari <jaybalaji192@gmail.com>
+Date:   Sun Nov 6 18:56:57 2022 +0530
+
+    clrscr for vscode
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9b79cfb[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m.vscode/[m
+[32m+[m[32m*.exe[m
+\ No newline at end of file[m
+[1mdiff --git a/Projects/Mini projects/Unit Converter/menu driven unit converter.c b/Projects/Mini projects/Unit Converter/menu driven unit converter.c[m
+[1mindex 4134ff8..9ebaa4c 100644[m
+[1m--- a/Projects/Mini projects/Unit Converter/menu driven unit converter.c[m	
+[1m+++ b/Projects/Mini projects/Unit Converter/menu driven unit converter.c[m	
+[36m@@ -1,6 +1,6 @@[m
+ [m
+ #include<stdio.h>[m
+[31m-#include<conio.h>[m
+[32m+[m[32m// #include<conio.h>[m
+ void main()[m
+ {[m
+     [m
+[36m@@ -18,7 +18,7 @@[m [mvoid main()[m
+     printf("\n\nEnter = ");[m
+     scanf(" %c",&opt);[m
+ [m
+[31m-    clrscr(); //it will clear upper statements form output window[m
+[32m+[m[32m    system('cls');    //it will clear upper statements form output window[m
+ [m
+     switch( opt )[m
+     {[m
+[36m@@ -186,7 +186,7 @@[m [mvoid main()[m
+         printf("\n\n\nDo you want to go main menu?(y/n)....");[m
+         scanf(" %c",&opt);[m
+         [m
+[31m-    clrscr();[m
+[32m+[m[32m    system('cls');[m
+             [m
+     }[m
+     while(opt == 'y');[m
+[1mdiff --git a/Projects/check_vowels_&_consonants.txt b/Projects/check_vowels_&_consonants.txt[m
+[1mdeleted file mode 100644[m
+[1mindex aa440b9..0000000[m
+[1m--- a/Projects/check_vowels_&_consonants.txt[m
+[1m+++ /dev/null[m
+[36m@@ -1,48 +0,0 @@[m
+[31m-#include<stdio.h>[m
+[31m-#include<stdlib.h>[m
+[31m-int main()[m
+[31m-{[m
+[31m-	char str[100];[m
+[31m-	puts("ENTER A STRING: ");[m
+[31m-	gets(str);[m
+[31m-	int len = strlen(str);[m
+[31m-	int i,count_vowel=0,count_consonants=0;[m
+[31m-	puts("VOWELS ARE : ");[m
+[31m-	for(i=0;i<=len;i++)[m
+[31m-	{[m
+[31m-		if(str[i]=='A'||str[i]=='a'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='O'||str[i]=='o'||str[i]=='u'||str[i]=='U')[m
+[31m-		{[m
+[31m-			[m
+[31m-			printf("\n %c ",str[i]);[m
+[31m-			count_vowel++;[m
+[31m-				[m
+[31m-			[m
+[31m-		}[m
+[31m-		[m
+[31m-		[m
+[31m-	}[m
+[31m-	puts("\nCONSONANTS ARE : ");[m
+[31m-	for(i=0;i<=len;i++)[m
+[31m-	{[m
+[31m-		if(str[i]=='A'||str[i]=='a'||str[i]=='e'||str[i]=='E'||str[i]=='i'||str[i]=='I'||str[i]=='O'||str[i]=='o'||str[i]=='u'||str[i]=='U')[m
+[31m-		{[m
+[31m-				[m
+[31m-			[m
+[31m-		}[m
+[31m-		else if(str[i]==' '||str[i]=='\0')[m
+[31m-		{[m
+[31m-			[m
+[31m-		}[m
+[31m-		else[m
+[31m-		{[m
+[31m-			[m
+[31m-			printf("\n %c",str[i]);[m
+[31m-			count_consonants++;[m
+[31m-		}[m
+[31m-		[m
+[31m-	}[m
+[31m-	printf("\nNUMBER OF VOWELS=%d",count_vowel);[m
+[31m-	printf("\nNUMBER OF VOWELS=%d",count_consonants);[m
+[31m-	[m
+[31m-[m
+[31m-	return 0;[m
+\ No newline at end of file[m
+[1mdiff --git a/Projects/first program.c b/Projects/first program.c[m
+[1mdeleted file mode 100644[m
+[1mindex a04a72e..0000000[m
+[1m--- a/Projects/first program.c[m	
+[1m+++ /dev/null[m
+[36m@@ -1,7 +0,0 @@[m
+[31m-#include <stdio.h>[m
+[31m-void main ()[m
+[31m-{[m
+[31m-    int a ;[m
+[31m-    scanf("%i",&a);[m
+[31m-    printf("you entere number is %i",a);[m
+[31m-}[m
+\ No newline at end of file[m

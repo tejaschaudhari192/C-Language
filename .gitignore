@@ -1,2 +1,4 @@
+attach outputs/
 .vscode/
 *.exe
+*.json
