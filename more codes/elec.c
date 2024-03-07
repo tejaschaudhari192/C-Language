@@ -10,6 +10,7 @@ According to the given condition:
  Finally, add an additional surcharge of 20% into the above-calculated amount to compute the total electricity bill.
 
 */
+
 #include <stdio.h>
 void main(int argc, char const *argv[])
 {

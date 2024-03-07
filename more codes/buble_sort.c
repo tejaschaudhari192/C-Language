@@ -22,7 +22,6 @@ void main()
     }
     
     printf("sorted array is ");
-    
     for(i=0;i<5;i++)
         printf("\n%d",a[i]);
         
